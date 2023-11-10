@@ -16,7 +16,8 @@ def generate_pet_name(animal_type, pet_color, coat_pattern):
 
     prompt_template_name = PromptTemplate(
         input_variables=['animal_type', 'pet_color', 'coat_pattern'],
-        template="I have a {animal_type} pet and I want a cool name for it, it is {pet_color} in color and has a {coat_pattern} pattern. Suggest me five cool names for my pet."
+        # template="I have a {animal_type} pet and I want a cool name for it, it is {pet_color} in color and has a {coat_pattern} pattern. Suggest me five cool names for my pet."
+        template = "I have a {pet_color} {animal_type}, which has {coat_pattern} coat pattern. Please generate 5 names for my pet."
     )
 
     # LLM Chain --to--> name_chain
@@ -41,7 +42,7 @@ def generate_output(input):
     return response
 
 def langchain_agent(question):
-    llm = OpenAI(temperature=0.5)
+    llm = OpenAI(temperature=0)
 
     # Note - Wikipedia must be installed, numexpr for numerical expression evaluator for NumPy.
     # pip install wikipedia numexpr

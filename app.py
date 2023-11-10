@@ -37,6 +37,8 @@ def process():
         pet = request.form['pet']
         color = request.form['color']
         pattern = request.form['pattern']
+        if request.form.get('pattern') != None:
+            pattern = "no"
 
 
         print(f"THE INPUT (pet, color, pattern): {pet}, {color}, {pattern}")
