@@ -26,7 +26,7 @@ def generate_pet_name(animal_type, pet_color, coat_pattern):
                           'pet_color': pet_color, 'coat_pattern': 'coat_pattern'})
     return response
 
-# Eitan's implementation
+# Eitan's implementation for the landing page.
 def generate_output(input):
     llm = OpenAI(temperature=0.7)
 
@@ -40,7 +40,7 @@ def generate_output(input):
 
     return response
 
-def langchain_agent():
+def langchain_agent(question):
     llm = OpenAI(temperature=0.5)
 
     # Note - Wikipedia must be installed, numexpr for numerical expression evaluator for NumPy.
@@ -49,10 +49,9 @@ def langchain_agent():
     agent = initialize_agent(
         tools, llm, agent=AgentType.ZERO_SHOT_REACT_DESCRIPTION, verbose=True
     )
-    result = agent.run(
-        "What is the average age of a dog? Multiply the age by 3"
-    )
-    print(result)
+
+    return agent(question)
+ 
 
 
 if __name__ == "__main__":

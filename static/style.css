@@ -1,0 +1,55 @@
+* {
+    font-family: 'Arial', sans-serif; /* Set a default font */
+}
+
+h1 {
+    color: #112b45; /* Setting text color */
+    font-family: Arial, sans-serif; /* Setting font family */
+    text-align: center;
+}
+
+h3 {
+    color: #112b45; /* Setting text color */
+    font-family: Arial, sans-serif; /* Setting font family */
+}
+
+/* Selecting the p element */
+p {
+    font-size: 16px; /* Setting font size */
+    line-height: 1.6; /* Setting line height for better readability */
+    font-family: Arial, sans-serif; /* Setting font family */
+}
+
+/* Selecting the main-container class */
+.main-container {
+    width: 80%; /* Setting width */
+    margin: 0 auto; /* Centering the container horizontally */
+    padding: 20px; /* Adding padding for space inside the container */
+    background-color: #f4f4f4; /* Setting background color */
+    border: 1px solid #ccc; /* Adding a border */
+}
+
+a {
+    text-decoration: none; /* Remove underline from links */
+    color: #336699; /* Set text color for unvisited links */
+    transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+/* Change link color on hover */
+a:hover {
+    color: #0099ff; /* Set a different color on hover */
+    text-decoration: underline;
+}
+
+/* General styling for the footer */
+.footer {
+    background-color: #333; /* Background color for the footer */
+    color: #fff; /* Text color */
+    text-align: center; /* Align text to the center */
+    padding: 20px; /* Padding for space inside the footer */
+}
+
+/* Styling for the paragraph within the footer */
+.footer p {
+    margin: 0; /* Remove default margins for the paragraph */
+}
