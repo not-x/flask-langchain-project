@@ -26,6 +26,19 @@ def generate_pet_name(animal_type, pet_color, coat_pattern):
                           'pet_color': pet_color, 'coat_pattern': 'coat_pattern'})
     return response
 
+# Eitan's implementation
+def generate_output(input):
+    llm = OpenAI(temperature=0.7)
+
+    prompt_template_name = PromptTemplate(
+        input_variables=['input'],
+        template="{input}"
+    )
+
+    name_chain = LLMChain(llm=llm, prompt=prompt_template_name, output_key="output")
+    response = name_chain({'input': input})
+
+    return response
 
 def langchain_agent():
     llm = OpenAI(temperature=0.5)
